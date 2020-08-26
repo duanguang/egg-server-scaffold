@@ -32,19 +32,6 @@ export default class FooBoot implements IBoot {
 
   async serverDidReady() {
     // Server is listening.
-    const ctx = await this.app.createAnonymousContext();
-    await ctx.service.customs.queryBaseData(
-      {
-        tableName: 'm_port_code',
-        param: '',
-        pageIndex: 1,
-        pageSize: 10,
-      },
-      {
-        session: '36C48168BABA9D6C8194A36493EB8EDB',
-        reqHost: '192.168.200.22:8087',
-      },
-    );
   }
 
   async beforeClose() {
